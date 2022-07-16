@@ -45,8 +45,8 @@ public class Human {
     @Column(name = "complement")
     private String complement;
 
-    @Column(name = "symptom")
-    private String symptom;
+    // @Column(name = "symptom")
+    // private String symptom;
 
     @Column(name = "gravity")
     private String gravity;
@@ -54,14 +54,42 @@ public class Human {
     @Column(name = "status")
     private String status;
 
-    public Human(String name, int age, String adress, String complement, String symptom, String gravity,
-            String status) {
+    @Column(name = "febre")
+    private boolean febre;
+
+    @Column(name = "manchas")
+    private boolean manchas;
+
+    @Column(name = "dorCabeca")
+    private boolean dorCabeca;
+
+    @Column(name = "nausea")
+    private boolean nausea;
+    
+    @Column(name = "dorOlhos")
+    private boolean dorOlhos;
+
+    @Column(name = "dorCorpo")
+    private boolean dorCorpo;
+
+    @Column(name = "cansaco")
+    private boolean cansaco;
+    
+
+    public Human(String name, int age, String adress, String complement, String gravity,
+            String status, boolean febre, boolean manchas, boolean dorCabeca, boolean  nausea, boolean dorOlhos, boolean dorCorpo, boolean cansaco) {
         this.name = name;
         this.age = age;
         this.adress = adress;
         this.complement = complement;
-        this.symptom = symptom;
         this.gravity = gravity;
         this.status = status;
+        this.febre = febre;
+        this.manchas = manchas;
+        this.dorCabeca = dorCabeca;
+        this.nausea = nausea;
+        this.dorOlhos = dorOlhos;
+        this.dorCorpo = dorCorpo;
+        this.cansaco = cansaco;
     }
 }
