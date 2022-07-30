@@ -9,20 +9,10 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+
 
 @Table(name = "human")
 @Entity(name = "human")
-
-@Getter
-@Setter
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 
 public class Human {
 
@@ -44,9 +34,6 @@ public class Human {
 
     @Column(name = "complement")
     private String complement;
-
-    // @Column(name = "symptom")
-    // private String symptom;
 
     @Column(name = "gravity")
     private String gravity;
@@ -75,7 +62,6 @@ public class Human {
     @Column(name = "cansaco")
     private boolean cansaco;
     
-
     public Human(String name, int age, String adress, String complement, String gravity,
             String status, boolean febre, boolean manchas, boolean dorCabeca, boolean  nausea, boolean dorOlhos, boolean dorCorpo, boolean cansaco) {
         this.name = name;
@@ -92,4 +78,62 @@ public class Human {
         this.dorCorpo = dorCorpo;
         this.cansaco = cansaco;
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getAdress() {
+        return adress;
+    }
+
+    public String getComplement() {
+        return complement;
+    }
+
+    public String getGravity() {
+        return gravity;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public boolean isFebre() {
+        return febre;
+    }
+
+    public boolean isManchas() {
+        return manchas;
+    }
+
+    public boolean isDorCabeca() {
+        return dorCabeca;
+    }
+
+    public boolean isNausea() {
+        return nausea;
+    }
+
+    public boolean isDorOlhos() {
+        return dorOlhos;
+    }
+
+    public boolean isDorCorpo() {
+        return dorCorpo;
+    }
+
+    public boolean isCansaco() {
+        return cansaco;
+    }
+
+    
 }
