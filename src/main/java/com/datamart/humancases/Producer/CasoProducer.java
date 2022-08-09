@@ -25,7 +25,7 @@ public class CasoProducer {
             rabbitTemplate.convertAndSend(exchange, routingKey, json);
         } catch (Exception e) {
             System.out.println(e.getMessage());
-            ;
+            
         }
     }
 }

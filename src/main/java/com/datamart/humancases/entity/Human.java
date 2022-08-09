@@ -14,6 +14,8 @@ import javax.validation.constraints.NotNull;
 @Table(name = "human")
 @Entity(name = "human")
 
+
+
 public class Human {
 
     @Id
@@ -77,6 +79,10 @@ public class Human {
         this.dorOlhos = dorOlhos;
         this.dorCorpo = dorCorpo;
         this.cansaco = cansaco;
+    }
+
+    public Human(){
+        
     }
 
     public Long getId() {
