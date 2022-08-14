@@ -1,5 +1,9 @@
 package com.datamart.humancases.entity;
 
+
+
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -63,9 +67,12 @@ public class Human {
 
     @Column(name = "cansaco")
     private boolean cansaco;
+
+    @Column(name = "date")
+    private Date date;
     
     public Human(String name, int age, String adress, String complement, String gravity,
-            String status, boolean febre, boolean manchas, boolean dorCabeca, boolean  nausea, boolean dorOlhos, boolean dorCorpo, boolean cansaco) {
+            String status, boolean febre, boolean manchas, boolean dorCabeca, boolean  nausea, boolean dorOlhos, boolean dorCorpo, boolean cansaco, Date date) {
         this.name = name;
         this.age = age;
         this.adress = adress;
@@ -79,6 +86,7 @@ public class Human {
         this.dorOlhos = dorOlhos;
         this.dorCorpo = dorCorpo;
         this.cansaco = cansaco;
+        this.date = date;
     }
 
     public Human(){
@@ -141,5 +149,8 @@ public class Human {
         return cansaco;
     }
 
+    public Date getDate(){
+        return date;
+    }
     
 }
